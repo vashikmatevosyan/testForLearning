@@ -1,0 +1,441 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.wrapper{
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+body{
+    font-size: 16px;
+    background: #ffffff;
+    color: black;
+    font-family: "Lato" , sans-serif;
+}
+.container{
+    width: 1080px;
+    margin: 0 auto;
+}
+.header{
+    background-image: url("../img/headerbckg.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 800px;
+
+}
+.nav__block{
+    padding-top: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+.nav__list:nth-child(1):after,
+.nav__list:nth-child(4):after{
+    content: ".";
+    margin: 0 50px;
+}
+.nav__list:nth-child(3){
+    margin: 0 50px;
+}
+.nav__link{
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: #4d4959;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+.nav__link:hover{
+    color: lightgray;
+}
+.news{
+    padding: 120px 0 140px 0;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #f7f7f7;
+}
+.news__icon{
+    margin-bottom: 20px;
+}
+.news__title{
+    margin-bottom: 30px;
+    font-size: 18px;
+    letter-spacing: 4px;
+    color: #353738;
+    font-weight: 700;
+}
+.news__desc{
+    font-size: 18px;
+    line-height: 34px;
+    color: #848789;
+    font-weight: 400;
+}
+.work__row{
+    height: 600px;
+    width: 100%;
+    display: flex;
+}
+.work__left{
+    width: 66.7%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.layer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(147 , 175, 255, 0.5);
+    transition: all 0.5s;
+}
+.work__left:hover .layer{
+    top: 0;
+    left: 0;
+}
+.left___img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.work__right{
+    width: 33.3%;
+    height: 100%;
+    position: relative;
+}
+.work__right:hover .work__figc{
+    height: 500px;
+}
+.work__right:hover .figc__desc{
+    height: 180px;
+}
+.work__figc{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    padding: 70px;
+    height: 400px;
+    background-color: #ffffff;
+    z-index: 3;
+    transition: 0.5s;
+}
+.work__figc:before{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 1px;
+    background-color: rgba(53,55,56,0.2);
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    bottom: 30px;
+}
+.work__figc:after{
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 10px 0 10px;
+    border-color: #ffffff transparent transparent transparent;
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    z-index: 1;
+}
+.row__icon{
+    margin-bottom: 30px;
+}
+.figc__title{
+    margin-bottom: 10px;
+    font-size: 18px;
+    letter-spacing: 4px;
+    color: #353738;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.figc__desc{
+    font-size: 16px;
+    line-height: 30px;
+    color: #848789;
+    font-weight: 400;
+    height: 110px;
+    overflow: hidden;
+    text-align: justify;
+    position: relative;
+    transition: 0.5s;
+}
+
+.right__img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+}
+.row2{
+    flex-direction: row-reverse;
+}
+.width{
+    width: 33.3%;
+}
+.twitter{
+    width: 100%;
+    background-color: #f7f7f7;
+    padding: 126px 0 70px 0;
+    text-align: center;
+}
+.fab{
+    color: #56c7ee;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+.twitter__title{
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #353738;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.color{
+    color: darkgray;
+}
+.twitter__desc{
+    font-size: 24px;
+    line-height: 34px;
+    color: #848789;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 110px;
+}
+.counter{
+    display: flex;
+    justify-content: center;
+}
+.a{
+    width: 11px;
+    height: 11px;
+    border-radius: 5px;
+    background-color: #a9afb3;
+    cursor: pointer;
+}
+.b{
+    width: 11px;
+    height: 11px;
+    border-radius: 5px;
+    background-color: rgba(40,47,53,0);
+    border: 1px solid #c8c8c8;
+    transition: all 0.3s;
+}
+.c{
+    margin: 0 7px;
+}
+.b:hover{
+    width: 11px;
+    height: 11px;
+    border-radius: 5px;
+    background-color: #a9afb3;
+    cursor: pointer;
+}
+.shop__row{
+    display: flex;
+    width: 100%;
+    height: 520px;
+}
+.figure__block{
+    width: 33%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.shop__icon{
+    position: relative;
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+}
+.shop__icon:nth-child(3){
+    width: 100%;
+}
+.shop__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.block2 .shop__icon{
+    width: 50%;
+    height: 100%;
+}
+.block3{
+    width: 34%;
+    flex-wrap: wrap-reverse;
+}
+.shop__row .layer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(100,194,158,0.8);
+    transition: all 0.5s;
+    flex-direction: column;
+}
+.shop__icon:hover .layer{
+    top: 0;
+    left: 0;
+}
+.layer__text{
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.discover{
+    padding: 70px 0;
+    width: 100%;
+    height: 100%;
+    background-color: #282f35;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.discover__link{
+    text-decoration: none;
+    padding: 20px 50px;
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    transition: all 0.5s;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+.discover__link:hover{
+    background-color: rgba(100,194,158,0.5)
+}
+.mailing{
+    width: 100%;
+    padding: 110px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo__block{
+    margin-bottom: 30px;
+}
+.mailing__title{
+    font-size: 24px;
+    line-height: 34px;
+    color: #848789;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+.form{
+    display: flex;
+}
+.form__input{
+    width: 400px;
+    height: 70px;
+    border: 1px solid #d3d7d9;
+    padding-left: 20px;
+}
+.form__input::placeholder{
+    font-size: 20px;
+    line-height: 24px;
+    color: #929292;
+    font-weight: 400;
+    font-style: italic;
+}
+.mail__button{
+    padding: 23px 45px;
+    background-color: #64c29e;
+    font-size: 24px;
+    line-height: 24px;
+    color: #ffffff;
+    font-weight: 300;
+    text-align: center;
+    border: 0;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: all 0.5s;
+}
+.mail__button:hover{
+    opacity: 0.8;
+}
+.footer{
+    width: 100%;
+    padding: 100px 0;
+    background-color: #f7f7f7;
+}
+.footer .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.end{
+    text-align: left;
+}
+.footer__title{
+    font-size: 16px;
+    line-height: 18px;
+    color: #848789;
+    font-weight: 700;
+}
+.footer__desc{
+    font-size: 16px;
+    line-height: 18px;
+    color: #848789;
+    font-weight: 400;
+}
+.mail__link{
+    font-size: 16px;
+    color: #848789;
+    font-weight: 400;
+    text-decoration: none;
+}
+.soc{
+    display: flex;
+    align-items: center;
+}
+.fa-facebook{
+    color: blue;
+    font-size: 35px;
+    margin: 0 15px -30px;
+}
+.fa-pinterest{
+    color: red;
+    font-size: 35px;
+    margin-bottom: -30px;
+}
+.yebo{
+    display: flex;
+    align-items: center;
+}
+.yebo__desc{
+    font-size: 14px;
+    line-height: 18px;
+    color: #848789;
+    font-weight: 400;
+    font-style: italic;
+    margin-right: 10px;
+}
